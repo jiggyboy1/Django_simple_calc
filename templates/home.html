@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate</title>
+    <style>
+        body{
+            text-align: center;
+            margin: auto;
+            width: 60;
+            border: 3px solid;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    {% block content%}
+    <section><br><br>
+        <h1 >My calcultor </h1>
+        <form action="result" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="Firstnumber">Enter First Number</label><br><br>
+                <input type="text" name="number1" placeholder="Enter First number"><br><br>
+            </div>
+          <div class="mb-3">
+                <label for="secondnumber">Enter secomd Number</label><br><br>
+                <input type="text" name="number2" placeholder="Enter Secomd number"><br>
+          </div>
+          <br>
+          <button type="submit" class="btn btn-primary" name="add">+</button>
+          <button type="submit" class="btn btn-primary" name="subtract">-</button>
+          <button type="submit" class="btn btn-primary" name="multipilcation">X</button>
+          <button type="submit" class="btn btn-primary" name="division">/</button>
+
+
+        </form>
+    </section>
+    {% endblock %}
+</body>
+</html>
